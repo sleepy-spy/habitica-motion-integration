@@ -26,7 +26,17 @@ global.fetch = async (url, options) => {
     return {
       ok: true,
       json: async () => ({
-        workspaces: [{ id: 'ws-1', name: 'My Private Workspace', statuses: [{ id: 'st-1', name: 'Done', isResolvedStatus: true }] }],
+        workspaces: [{ id: 'ws-1', name: 'My Private Workspace' }],
+      }),
+    };
+  }
+
+  // Mock Motion API - statuses
+  if (urlStr.includes('/statuses')) {
+    return {
+      ok: true,
+      json: async () => ({
+        statuses: [{ name: 'Done', isDefaultStatus: false, isResolvedStatus: true }],
       }),
     };
   }

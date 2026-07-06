@@ -33,15 +33,22 @@ async function getWorkspaceIdByName(name) {
   return workspace.id;
 }
 
-async function getResolvedStatus(workspaceId) {
-  const workspaces = await getWorkspaces();
-  const workspace = workspaces.find(w => w.id === workspaceId);
+async function getStatuses(workspaceId) {
+  const response = await fetch(`${MOTION_BASE_URL}/statuses?workspaceId=${workspaceId}`, {
+    headers: getHeaders(),
+  });
 
-  if (!workspace) {
-    throw new Error(`Workspace ${workspaceId} not found`);
+  if (!response.ok) {
+    throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
   }
 
-  const resolvedStatus = workspace.statuses.find(s => s.isResolvedStatus);
+  const json = await response.json();
+  return json.statuses;
+}
+
+async function getResolvedStatus(workspaceId) {
+  const statuses = await getStatuses(workspaceId);
+  const resolvedStatus = statuses.find(s => s.isResolvedStatus);
 
   if (!resolvedStatus) {
     throw new Error('No resolved status found in workspace');
@@ -114,4 +121,4 @@ async function updateTask(motionId, { name, description, dueDate, status, worksp
   return await response.json();
 }
 
-module.exports = { getWorkspaces, getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask };
+module.exports = { getWorkspaces, getWorkspaceIdByName, getStatuses, getResolvedStatus, listTasks, createTask, updateTask };
