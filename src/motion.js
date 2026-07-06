@@ -75,11 +75,7 @@ async function createTask({ name, description, dueDate, workspaceId }) {
 }
 
 async function updateTask(motionId, { name, description, dueDate, completed, workspaceId }) {
-  const body = {
-    workspaceId,
-    priority: 'MEDIUM',
-    duration: 60,
-  };
+  const body = {};
 
   if (name) body.name = name;
   if (description) body.description = description;
@@ -93,6 +89,8 @@ async function updateTask(motionId, { name, description, dueDate, completed, wor
   });
 
   if (!response.ok) {
+    const errorBody = await response.text();
+    console.error('Motion API error body:', errorBody);
     throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
   }
 
