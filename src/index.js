@@ -1,5 +1,4 @@
 require('dotenv').config();
-const cron = require('node-cron');
 const fs = require('fs');
 const path = require('path');
 const { fetchTodos } = require('./habitica');
@@ -79,10 +78,5 @@ async function sync() {
   console.log('Sync complete!');
 }
 
-// Run sync immediately on start
+// Run sync
 sync().catch(console.error);
-
-// Then run every 30 minutes
-cron.schedule('*/30 * * * *', () => {
-  sync().catch(console.error);
-});
