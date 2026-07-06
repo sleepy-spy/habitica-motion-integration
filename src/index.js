@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { fetchTodos } = require('./habitica');
-const { getWorkspaceIdByName, listTasks, createTask, updateTask } = require('./motion');
+const { getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask } = require('./motion');
 
 const SYNC_MAP_PATH = path.join(__dirname, '..', 'sync-map.json');
 const WORKSPACE_NAME = 'My Tasks (Private)';
@@ -21,9 +21,11 @@ function saveSyncMap(map) {
 async function sync() {
   console.log('Starting sync...');
 
-  // 1. Resolve workspace ID
+  // 1. Resolve workspace ID and resolved status
   const workspaceId = await getWorkspaceIdByName(WORKSPACE_NAME);
+  const resolvedStatus = await getResolvedStatus(workspaceId);
   console.log(`Workspace ID: ${workspaceId}`);
+  console.log(`Resolved status: ${resolvedStatus}`);
 
   // 2. Fetch incomplete to-dos from Habitica
   const habiticaTodos = await fetchTodos();
@@ -43,7 +45,6 @@ async function sync() {
         name: todo.text,
         description: todo.notes || '',
         dueDate: todo.date || null,
-        completed: false,
         workspaceId,
       });
       console.log(`Updated: ${todo.text}`);
@@ -65,8 +66,7 @@ async function sync() {
     if (!habiticaIds.has(habId) && !entry.completed) {
       try {
         await updateTask(entry.motionId, {
-          workspaceId,
-          completed: true,
+          status: resolvedStatus,
         });
         entry.completed = true;
         console.log(`Marked complete: ${habId}`);

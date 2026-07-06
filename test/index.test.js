@@ -26,7 +26,7 @@ global.fetch = async (url, options) => {
     return {
       ok: true,
       json: async () => ({
-        workspaces: [{ id: 'ws-1', name: 'My Private Workspace' }],
+        workspaces: [{ id: 'ws-1', name: 'My Private Workspace', statuses: [{ id: 'st-1', name: 'Done', isResolvedStatus: true }] }],
       }),
     };
   }
@@ -61,7 +61,7 @@ global.fetch = async (url, options) => {
       json: async () => ({
         id: urlStr.split('/').pop(),
         name: body.name,
-        completed: body.completed,
+        status: body.status,
       }),
     };
   }

@@ -33,6 +33,23 @@ async function getWorkspaceIdByName(name) {
   return workspace.id;
 }
 
+async function getResolvedStatus(workspaceId) {
+  const workspaces = await getWorkspaces();
+  const workspace = workspaces.find(w => w.id === workspaceId);
+
+  if (!workspace) {
+    throw new Error(`Workspace ${workspaceId} not found`);
+  }
+
+  const resolvedStatus = workspace.statuses.find(s => s.isResolvedStatus);
+
+  if (!resolvedStatus) {
+    throw new Error('No resolved status found in workspace');
+  }
+
+  return resolvedStatus.name;
+}
+
 async function listTasks(workspaceId) {
   const url = workspaceId
     ? `${MOTION_BASE_URL}/tasks?workspaceId=${workspaceId}`
@@ -74,13 +91,13 @@ async function createTask({ name, description, dueDate, workspaceId }) {
   return await response.json();
 }
 
-async function updateTask(motionId, { name, description, dueDate, completed, workspaceId }) {
+async function updateTask(motionId, { name, description, dueDate, status, workspaceId }) {
   const body = {};
 
   if (name) body.name = name;
   if (description) body.description = description;
   if (dueDate) body.dueDate = dueDate;
-  if (completed !== undefined) body.completed = completed;
+  if (status) body.status = status;
 
   const response = await fetch(`${MOTION_BASE_URL}/tasks/${motionId}`, {
     method: 'PATCH',
@@ -97,4 +114,4 @@ async function updateTask(motionId, { name, description, dueDate, completed, wor
   return await response.json();
 }
 
-module.exports = { getWorkspaces, getWorkspaceIdByName, listTasks, createTask, updateTask };
+module.exports = { getWorkspaces, getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask };

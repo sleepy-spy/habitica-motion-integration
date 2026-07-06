@@ -6,8 +6,8 @@ global.fetch = async (url, options) => {
     ok: true,
     json: async () => ({
       workspaces: [
-        { id: 'ws-1', name: 'My Private Workspace' },
-        { id: 'ws-2', name: 'Team Workspace' },
+        { id: 'ws-1', name: 'My Private Workspace', statuses: [{ id: 'st-1', name: 'Done', isResolvedStatus: true }, { id: 'st-2', name: 'In Progress', isResolvedStatus: false }] },
+        { id: 'ws-2', name: 'Team Workspace', statuses: [{ id: 'st-3', name: 'Completed', isResolvedStatus: true }] },
       ],
     }),
   };
@@ -16,7 +16,7 @@ global.fetch = async (url, options) => {
 // Set test env vars
 process.env.MOTION_API_KEY = 'test-api-key';
 
-const { getWorkspaces, getWorkspaceIdByName, listTasks, createTask, updateTask } = require('../src/motion');
+const { getWorkspaces, getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask } = require('../src/motion');
 
 async function testGetWorkspaces() {
   const workspaces = await getWorkspaces();
@@ -41,6 +41,22 @@ async function testGetWorkspaceIdByNameNotFound() {
   } catch (error) {
     assert(error.message.includes('not found'), 'Error should say not found');
     console.log('PASS: getWorkspaceIdByName throws error for missing workspace');
+  }
+}
+
+async function testGetResolvedStatus() {
+  const status = await getResolvedStatus('ws-1');
+  assert.strictEqual(status, 'Done', 'Should return the resolved status name');
+  console.log('PASS: getResolvedStatus returns correct status');
+}
+
+async function testGetResolvedStatusNotFound() {
+  try {
+    await getResolvedStatus('ws-nonexistent');
+    assert.fail('Should throw error');
+  } catch (error) {
+    assert(error.message.includes('not found'), 'Error should say not found');
+    console.log('PASS: getResolvedStatus throws error for missing workspace');
   }
 }
 
@@ -113,19 +129,19 @@ async function testUpdateTask() {
       json: async () => ({
         id: 'task-1',
         name: body.name,
-        completed: body.completed,
+        status: body.status,
       }),
     };
   };
 
   const task = await updateTask('task-1', {
     name: 'Updated Task',
-    completed: true,
+    status: 'Done',
     workspaceId: 'ws-1',
   });
 
   assert.strictEqual(task.id, 'task-1', 'Should return task ID');
-  assert.strictEqual(task.completed, true, 'Should be completed');
+  assert.strictEqual(task.status, 'Done', 'Should have Done status');
   console.log('PASS: updateTask updates task correctly');
 
   // Reset fetch
@@ -141,6 +157,7 @@ async function testUpdateTaskError() {
     ok: false,
     status: 404,
     statusText: 'Not Found',
+    text: async () => '{"message":"Not Found"}',
   });
 
   try {
@@ -163,6 +180,8 @@ async function runTests() {
   await testGetWorkspaces();
   await testGetWorkspaceIdByName();
   await testGetWorkspaceIdByNameNotFound();
+  await testGetResolvedStatus();
+  await testGetResolvedStatusNotFound();
   await testListTasks();
   await testCreateTask();
   await testUpdateTask();
