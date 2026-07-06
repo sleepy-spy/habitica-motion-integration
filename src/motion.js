@@ -50,12 +50,10 @@ async function createTask({ name, description, dueDate, workspaceId }) {
 }
 
 async function updateTask(motionId, fields) {
-  const { completed, ...safeFields } = fields;
-
   const response = await fetch(`${MOTION_BASE_URL}/tasks/${motionId}`, {
     method: 'PATCH',
     headers: getHeaders(),
-    body: JSON.stringify(safeFields),
+    body: JSON.stringify(fields),
   });
 
   if (!response.ok) {

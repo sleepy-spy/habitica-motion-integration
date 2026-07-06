@@ -23,9 +23,8 @@ async function sync() {
 
   // 1. Resolve workspace ID
   const workspaceId = await getWorkspaceIdByName(WORKSPACE_NAME);
-  const resolvedStatus = 'Completed';
+  const taskCompletion = 'Completed';
   console.log(`Workspace ID: ${workspaceId}`);
-  console.log(`Resolved status: ${resolvedStatus}`);
 
   // 2. Fetch incomplete to-dos from Habitica
   const habiticaTodos = await fetchTodos();
@@ -47,6 +46,7 @@ async function sync() {
         dueDate: todo.date || null,
         workspaceId,
       });
+      entry.name = todo.text;
       console.log(`Updated: ${todo.text}`);
     } else {
       // New task - create it
@@ -56,7 +56,12 @@ async function sync() {
         dueDate: todo.date || null,
         workspaceId,
       });
-      syncMap[todo.id] = { motionId: created.id, completed: false };
+      syncMap[todo.id] = {
+        motionId: created.id,
+        name: todo.text,
+        workspaceId,
+        completed: false,
+      };
       console.log(`Created: ${todo.text}`);
     }
   }
@@ -66,7 +71,9 @@ async function sync() {
     if (!habiticaIds.has(habId) && !entry.completed) {
       try {
         await updateTask(entry.motionId, {
-          status: resolvedStatus,
+          name: entry.name,
+          workspaceId: entry.workspaceId,
+          status: taskCompletion,
         });
         entry.completed = true;
         console.log(`Marked complete: ${habId}`);

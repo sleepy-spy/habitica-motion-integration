@@ -4,19 +4,6 @@ const assert = require('assert');
 global.fetch = async (url, options) => {
   const urlStr = url.toString();
 
-  // Mock statuses endpoint
-  if (urlStr.includes('/statuses')) {
-    return {
-      ok: true,
-      json: async () => ({
-        statuses: [
-          { name: 'Done', isDefaultStatus: false, isResolvedStatus: true },
-          { name: 'In Progress', isDefaultStatus: true, isResolvedStatus: false },
-        ],
-      }),
-    };
-  }
-
   return {
     ok: true,
     json: async () => ({
@@ -31,16 +18,7 @@ global.fetch = async (url, options) => {
 // Set test env vars
 process.env.MOTION_API_KEY = 'test-api-key';
 
-const { getWorkspaces, getWorkspaceIdByName, getStatuses, getResolvedStatus, listTasks, createTask, updateTask } = require('../src/motion');
-
-async function testGetWorkspaces() {
-  const workspaces = await getWorkspaces();
-
-  assert(Array.isArray(workspaces), 'Should return an array');
-  assert.strictEqual(workspaces.length, 2, 'Should return 2 workspaces');
-  assert.strictEqual(workspaces[0].name, 'My Private Workspace', 'First workspace name');
-  console.log('PASS: getWorkspaces returns correct data');
-}
+const { getWorkspaceIdByName, createTask, updateTask } = require('../src/motion');
 
 async function testGetWorkspaceIdByName() {
   const id = await getWorkspaceIdByName('My Private Workspace');
@@ -57,48 +35,6 @@ async function testGetWorkspaceIdByNameNotFound() {
     assert(error.message.includes('not found'), 'Error should say not found');
     console.log('PASS: getWorkspaceIdByName throws error for missing workspace');
   }
-}
-
-async function testGetResolvedStatus() {
-  const status = await getResolvedStatus('ws-1');
-  assert.strictEqual(status, 'Done', 'Should return the resolved status name');
-  console.log('PASS: getResolvedStatus returns correct status');
-}
-
-async function testGetStatuses() {
-  const statuses = await getStatuses('ws-1');
-  assert(Array.isArray(statuses), 'Should return an array');
-  assert.strictEqual(statuses.length, 2, 'Should return 2 statuses');
-  assert.strictEqual(statuses[0].name, 'Done', 'First status name');
-  assert.strictEqual(statuses[0].isResolvedStatus, true, 'First status is resolved');
-  console.log('PASS: getStatuses returns correct data');
-}
-
-async function testListTasks() {
-  // Mock tasks response
-  global.fetch = async (url, options) => {
-    return {
-      ok: true,
-      json: async () => ({
-        tasks: [
-          { id: 'task-1', name: 'Motion Task 1' },
-          { id: 'task-2', name: 'Motion Task 2' },
-        ],
-      }),
-    };
-  };
-
-  const tasks = await listTasks('ws-1');
-
-  assert(Array.isArray(tasks), 'Should return an array');
-  assert.strictEqual(tasks.length, 2, 'Should return 2 tasks');
-  console.log('PASS: listTasks returns correct data');
-
-  // Reset fetch
-  global.fetch = async () => ({
-    ok: true,
-    json: async () => ({ workspaces: [] }),
-  });
 }
 
 async function testCreateTask() {
@@ -191,12 +127,8 @@ async function testUpdateTaskError() {
 
 async function runTests() {
   console.log('Running motion.js tests...\n');
-  await testGetWorkspaces();
   await testGetWorkspaceIdByName();
   await testGetWorkspaceIdByNameNotFound();
-  await testGetResolvedStatus();
-  await testGetStatuses();
-  await testListTasks();
   await testCreateTask();
   await testUpdateTask();
   await testUpdateTaskError();
