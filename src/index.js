@@ -45,7 +45,6 @@ async function sync() {
           name: todo.text,
           description: todo.notes || '',
           dueDate: todo.date || null,
-          workspaceId,
         });
         entry.name = todo.text;
         console.log(`Updated: ${todo.text}`);
@@ -76,7 +75,6 @@ async function sync() {
       try {
         await updateTask(entry.motionId, {
           name: entry.name,
-          workspaceId: entry.workspaceId,
           status: taskCompletion,
         });
         entry.completed = true;
