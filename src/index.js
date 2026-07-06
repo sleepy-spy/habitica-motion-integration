@@ -6,7 +6,7 @@ const { fetchTodos } = require('./habitica');
 const { getWorkspaceIdByName, listTasks, createTask, updateTask } = require('./motion');
 
 const SYNC_MAP_PATH = path.join(__dirname, '..', 'sync-map.json');
-const WORKSPACE_NAME = 'My Private Workspace';
+const WORKSPACE_NAME = 'My Tasks (Private)';
 
 function loadSyncMap() {
   if (fs.existsSync(SYNC_MAP_PATH)) {
