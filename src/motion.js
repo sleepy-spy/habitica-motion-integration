@@ -55,6 +55,7 @@ async function createTask({ name, description, dueDate, workspaceId }) {
     name,
     workspaceId,
     priority: 'MEDIUM',
+    duration: 60,
   };
 
   if (description) body.description = description;
@@ -78,6 +79,7 @@ async function updateTask(motionId, { name, description, dueDate, completed, wor
     name,
     workspaceId,
     priority: 'MEDIUM',
+    duration: 60,
   };
 
   if (description) body.description = description;
