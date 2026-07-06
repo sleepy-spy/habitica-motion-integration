@@ -76,12 +76,12 @@ async function createTask({ name, description, dueDate, workspaceId }) {
 
 async function updateTask(motionId, { name, description, dueDate, completed, workspaceId }) {
   const body = {
-    name,
     workspaceId,
     priority: 'MEDIUM',
     duration: 60,
   };
 
+  if (name) body.name = name;
   if (description) body.description = description;
   if (dueDate) body.dueDate = dueDate;
   if (completed !== undefined) body.completed = completed;

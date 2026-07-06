@@ -63,13 +63,16 @@ async function sync() {
   // 5. Mark tasks complete if they disappeared from Habitica
   for (const [habId, entry] of Object.entries(syncMap)) {
     if (!habiticaIds.has(habId) && !entry.completed) {
-      await updateTask(entry.motionId, {
-        name: 'unknown',
-        workspaceId,
-        completed: true,
-      });
-      entry.completed = true;
-      console.log(`Marked complete: ${habId}`);
+      try {
+        await updateTask(entry.motionId, {
+          workspaceId,
+          completed: true,
+        });
+        entry.completed = true;
+        console.log(`Marked complete: ${habId}`);
+      } catch (error) {
+        console.error(`Failed to close task ${entry.motionId}:`, error.message);
+      }
     }
   }
 
