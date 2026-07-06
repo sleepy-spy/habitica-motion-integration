@@ -9,11 +9,60 @@ function getHeaders() {
   };
 }
 
-// TODO: Implement these functions:
-// - getWorkspaceIdByName(name) → workspace ID
-// - getResolvedStatus(workspaceId) → resolved status name string
-// - listTasks(workspaceId) → array of tasks
-// - createTask({ name, description, dueDate, workspaceId }) → created task
-// - updateTask(motionId, { name, description, dueDate, status }) → updated task
+async function getWorkspaceIdByName(name) {
+  const response = await fetch(`${MOTION_BASE_URL}/workspaces`, {
+    headers: getHeaders(),
+  });
 
-module.exports = { getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask };
+  if (!response.ok) {
+    throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
+  }
+
+  const json = await response.json();
+  const workspace = json.workspaces.find(w => w.name === name);
+
+  if (!workspace) {
+    throw new Error(`Workspace "${name}" not found`);
+  }
+
+  return workspace.id;
+}
+
+async function createTask({ name, description, dueDate, workspaceId }) {
+  const response = await fetch(`${MOTION_BASE_URL}/tasks`, {
+    method: 'POST',
+    headers: getHeaders(),
+    body: JSON.stringify({
+      name,
+      description,
+      dueDate,
+      workspaceId,
+      priority: 'MEDIUM',
+      duration: 60,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+async function updateTask(motionId, fields) {
+  const { completed, ...safeFields } = fields;
+
+  const response = await fetch(`${MOTION_BASE_URL}/tasks/${motionId}`, {
+    method: 'PATCH',
+    headers: getHeaders(),
+    body: JSON.stringify(safeFields),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+module.exports = { getWorkspaceIdByName, createTask, updateTask };

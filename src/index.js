@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { fetchTodos } = require('./habitica');
-const { getWorkspaceIdByName, getResolvedStatus, listTasks, createTask, updateTask } = require('./motion');
+const { getWorkspaceIdByName, createTask, updateTask } = require('./motion');
 
 const SYNC_MAP_PATH = path.join(__dirname, '..', 'sync-map.json');
 const WORKSPACE_NAME = 'My Tasks (Private)';
@@ -21,9 +21,9 @@ function saveSyncMap(map) {
 async function sync() {
   console.log('Starting sync...');
 
-  // 1. Resolve workspace ID and resolved status
+  // 1. Resolve workspace ID
   const workspaceId = await getWorkspaceIdByName(WORKSPACE_NAME);
-  const resolvedStatus = await getResolvedStatus(workspaceId);
+  const resolvedStatus = 'Completed';
   console.log(`Workspace ID: ${workspaceId}`);
   console.log(`Resolved status: ${resolvedStatus}`);
 
