@@ -1,3 +1,88 @@
 require('dotenv').config();
+const cron = require('node-cron');
+const fs = require('fs');
+const path = require('path');
+const { fetchTodos } = require('./habitica');
+const { getWorkspaceIdByName, listTasks, createTask, updateTask } = require('./motion');
 
-console.log('Habitica-Motion integration started');
+const SYNC_MAP_PATH = path.join(__dirname, '..', 'sync-map.json');
+const WORKSPACE_NAME = 'My Private Workspace';
+
+function loadSyncMap() {
+  if (fs.existsSync(SYNC_MAP_PATH)) {
+    return JSON.parse(fs.readFileSync(SYNC_MAP_PATH, 'utf8'));
+  }
+  return {};
+}
+
+function saveSyncMap(map) {
+  fs.writeFileSync(SYNC_MAP_PATH, JSON.stringify(map, null, 2));
+}
+
+async function sync() {
+  console.log('Starting sync...');
+
+  // 1. Resolve workspace ID
+  const workspaceId = await getWorkspaceIdByName(WORKSPACE_NAME);
+  console.log(`Workspace ID: ${workspaceId}`);
+
+  // 2. Fetch incomplete to-dos from Habitica
+  const habiticaTodos = await fetchTodos();
+  const habiticaIds = new Set(habiticaTodos.map(t => t.id));
+  console.log(`Found ${habiticaTodos.length} Habitica to-dos`);
+
+  // 3. Load sync-map
+  const syncMap = loadSyncMap();
+
+  // 4. Create or update tasks from Habitica
+  for (const todo of habiticaTodos) {
+    const entry = syncMap[todo.id];
+
+    if (entry) {
+      // Task exists - update it
+      await updateTask(entry.motionId, {
+        name: todo.text,
+        description: todo.notes || '',
+        dueDate: todo.date || null,
+        completed: false,
+        workspaceId,
+      });
+      console.log(`Updated: ${todo.text}`);
+    } else {
+      // New task - create it
+      const created = await createTask({
+        name: todo.text,
+        description: todo.notes || '',
+        dueDate: todo.date || null,
+        workspaceId,
+      });
+      syncMap[todo.id] = { motionId: created.id, completed: false };
+      console.log(`Created: ${todo.text}`);
+    }
+  }
+
+  // 5. Mark tasks complete if they disappeared from Habitica
+  for (const [habId, entry] of Object.entries(syncMap)) {
+    if (!habiticaIds.has(habId) && !entry.completed) {
+      await updateTask(entry.motionId, {
+        name: 'unknown',
+        workspaceId,
+        completed: true,
+      });
+      entry.completed = true;
+      console.log(`Marked complete: ${habId}`);
+    }
+  }
+
+  // 6. Save sync-map
+  saveSyncMap(syncMap);
+  console.log('Sync complete!');
+}
+
+// Run sync immediately on start
+sync().catch(console.error);
+
+// Then run every 30 minutes
+cron.schedule('*/30 * * * *', () => {
+  sync().catch(console.error);
+});

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sleepy-spy/habitica-motion-integration#readme",
   "dependencies": {
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "node-cron": "^4.6.0"
   }
 }
