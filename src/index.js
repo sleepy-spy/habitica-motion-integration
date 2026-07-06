@@ -38,31 +38,35 @@ async function sync() {
   for (const todo of habiticaTodos) {
     const entry = syncMap[todo.id];
 
-    if (entry) {
-      // Task exists - update it
-      await updateTask(entry.motionId, {
-        name: todo.text,
-        description: todo.notes || '',
-        dueDate: todo.date || null,
-        workspaceId,
-      });
-      entry.name = todo.text;
-      console.log(`Updated: ${todo.text}`);
-    } else {
-      // New task - create it
-      const created = await createTask({
-        name: todo.text,
-        description: todo.notes || '',
-        dueDate: todo.date || null,
-        workspaceId,
-      });
-      syncMap[todo.id] = {
-        motionId: created.id,
-        name: todo.text,
-        workspaceId,
-        completed: false,
-      };
-      console.log(`Created: ${todo.text}`);
+    try {
+      if (entry) {
+        // Task exists - update it
+        await updateTask(entry.motionId, {
+          name: todo.text,
+          description: todo.notes || '',
+          dueDate: todo.date || null,
+          workspaceId,
+        });
+        entry.name = todo.text;
+        console.log(`Updated: ${todo.text}`);
+      } else {
+        // New task - create it
+        const created = await createTask({
+          name: todo.text,
+          description: todo.notes || '',
+          dueDate: todo.date || null,
+          workspaceId,
+        });
+        syncMap[todo.id] = {
+          motionId: created.id,
+          name: todo.text,
+          workspaceId,
+          completed: false,
+        };
+        console.log(`Created: ${todo.text}`);
+      }
+    } catch (error) {
+      console.error(`Failed to sync "${todo.text}":`, error.message);
     }
   }
 

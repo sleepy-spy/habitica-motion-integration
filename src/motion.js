@@ -43,6 +43,8 @@ async function createTask({ name, description, dueDate, workspaceId }) {
   });
 
   if (!response.ok) {
+    const body = await response.text();
+    console.error(`Motion API ${response.status}: ${body}`);
     throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
   }
 
@@ -57,6 +59,8 @@ async function updateTask(motionId, fields) {
   });
 
   if (!response.ok) {
+    const body = await response.text();
+    console.error(`Motion API ${response.status}: ${body}`);
     throw new Error(`Motion API error: ${response.status} ${response.statusText}`);
   }
 
