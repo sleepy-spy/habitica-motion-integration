@@ -39,6 +39,10 @@ async function createTask({ name, description, dueDate, workspaceId }) {
       workspaceId,
       priority: 'MEDIUM',
       duration: 60,
+      autoScheduled: {
+        deadlineType: 'SOFT',
+        schedule: 'Work Hours',
+      },
     }),
   });
 
