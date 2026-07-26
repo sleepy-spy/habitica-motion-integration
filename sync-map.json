@@ -165,7 +165,7 @@
     "motionId": "tk_E1giPxMrBGMXWs4BH7c3h1",
     "name": "Electronics Report 4.2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "E24FD7D2-AE2F-4AD1-AA8D-252AAE2FE732": {
     "motionId": "tk_GrzaU6xyJGJHLwetacuCbY",
@@ -196,5 +196,11 @@
     "name": "CP Revision Set 01",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": true
+  },
+  "CB37F898-0531-4B78-B757-94A87AD069D5": {
+    "motionId": "tk_s41uekEqLLrtwPDsKzKLwb",
+    "name": "Electronics Report 4.3",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
   }
 }
