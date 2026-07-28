@@ -183,7 +183,7 @@
     "motionId": "tk_xvjimr59EyYiRppBnELD7P",
     "name": "Physics Revision Practical 3",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "59706030-69FA-4016-B925-11A504D5E57A": {
     "motionId": "tk_7eLD4KxzM9od3TswGLdNyC",
@@ -212,6 +212,12 @@
   "2BDD3CB2-052F-46B0-AEBF-66121C682795": {
     "motionId": "tk_4hHXTJYwCJ8QumrSpXFWtN",
     "name": "Electronics Report 6",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": true
+  },
+  "BE987B2A-D0AD-4410-9867-020307F667B2": {
+    "motionId": "tk_jTpSF4pxyLHPaDXk2SP1vP",
+    "name": "Electronics Report 7",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
