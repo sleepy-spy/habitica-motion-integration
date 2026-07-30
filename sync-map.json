@@ -219,17 +219,29 @@
     "motionId": "tk_jTpSF4pxyLHPaDXk2SP1vP",
     "name": "Electronics Report 7",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "6C2297C1-63FE-4638-8C48-E592DA375054": {
     "motionId": "tk_Kvts3MXwum7HnewFe7oTw5",
     "name": "Electronics Report 8",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "175B9A90-3F0A-4DC2-B93E-497C03BE6DDC": {
     "motionId": "tk_UKiNTW2j5R5xmVXM2eFLnH",
     "name": "2019 SS SBQ O Level Paper",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "474E1703-9465-49DA-8F16-3FB54E1E13D9": {
+    "motionId": "tk_G5KwMvMdfWwTVMJF28tT4G",
+    "name": "2020 SS SBQ O Level Paper",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "AEF0C831-D2C8-4B74-8033-F95EFF607E1C": {
+    "motionId": "tk_5eJFnKf82yUDGAYC3fme4W",
+    "name": "Computing 2025 SST Prelim P1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
