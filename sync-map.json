@@ -177,7 +177,7 @@
     "motionId": "tk_phLSvZENLuCKczZYe1tBUh",
     "name": "Computing 2025 SST Prelim P2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "BD25C092-E82A-4055-8A47-BF0988A17918": {
     "motionId": "tk_xvjimr59EyYiRppBnELD7P",
@@ -189,7 +189,7 @@
     "motionId": "tk_7eLD4KxzM9od3TswGLdNyC",
     "name": "CP Revision Set 02",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "3B538D48-D2EE-4BCA-8986-819033411603": {
     "motionId": "tk_XcKGdBaChvmkU6iSWW8AvC",
@@ -231,18 +231,18 @@
     "motionId": "tk_UKiNTW2j5R5xmVXM2eFLnH",
     "name": "2019 SS SBQ O Level Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "474E1703-9465-49DA-8F16-3FB54E1E13D9": {
     "motionId": "tk_G5KwMvMdfWwTVMJF28tT4G",
     "name": "2020 SS SBQ O Level Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "AEF0C831-D2C8-4B74-8033-F95EFF607E1C": {
     "motionId": "tk_5eJFnKf82yUDGAYC3fme4W",
     "name": "Computing 2025 SST Prelim P1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   }
 }
