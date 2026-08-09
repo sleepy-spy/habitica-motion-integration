@@ -249,13 +249,13 @@
     "motionId": "tk_5EWvFwiBQppu5DjJNmVM6y",
     "name": "Do Computing Paper 2 Revision for the Week -- 23 July",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "2C602A43-8C22-4C73-9BAA-F34357C8D6B8": {
     "motionId": "tk_XQsxBQL1eF6Gh9p7Zbi8Fm",
     "name": "Do Computing Revision Set 02",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "4AD6A74D-2433-4807-BB81-775D25E0FFEC": {
     "motionId": "tk_8DJmNRPZ5Vf3Hjjh9yyjdS",
@@ -314,6 +314,18 @@
   "6DA00E5C-66D4-4706-B82E-FDC05AC18B9F": {
     "motionId": "tk_PFM3vXRuo59uJMJ4hwzE2R",
     "name": "Review 2025 SST Prelim A Math Paper 1",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "E89D3FF6-9FF4-4549-9309-8106E1181B04": {
+    "motionId": "tk_YYkT1hm9yJc16hY1tbQKGo",
+    "name": "Review Computing Revision Set 02",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "E38707E2-69BA-435B-8BE2-8FF19624ABDB": {
+    "motionId": "tk_WxNEqg73CMXdRaGjAHm9zR",
+    "name": "Review Computing Paper 2 Revision for the Week -- 23 July",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
