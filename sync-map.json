@@ -267,7 +267,7 @@
     "motionId": "tk_gj3kLaLvF5MrM3Dc1h8Dx3",
     "name": "Do 2017 O Level Social Studies Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "ECAF1E19-828F-454A-9068-900DA5D9AA3B": {
     "motionId": "tk_KbbeXd27wGQ6rTQMicDqKk",
@@ -326,6 +326,12 @@
   "E38707E2-69BA-435B-8BE2-8FF19624ABDB": {
     "motionId": "tk_WxNEqg73CMXdRaGjAHm9zR",
     "name": "Review Computing Paper 2 Revision for the Week -- 23 July",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "AA0625FF-7492-4ED1-A0CF-6F22F2C0778A": {
+    "motionId": "tk_qcCtjJtgvK66UEMr7EU44b",
+    "name": "Review 2017 O Level Social Studies Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
