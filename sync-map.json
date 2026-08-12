@@ -369,11 +369,17 @@
     "motionId": "tk_hN1NnscWZFN39j12WPR22R",
     "name": "SS Issue 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "47DEC151-5D46-4FC5-A140-8FA3CB99260C": {
     "motionId": "tk_fR5FNibbaXvQf6xobLu18h",
     "name": "HTX Undaunted Student Award",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "C0DCE5DB-85A7-4CF1-AD98-73A5863DBF8C": {
+    "motionId": "tk_Yimwori9y4sTju5k8JLmF1",
+    "name": "2021 O Level Electronics Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
