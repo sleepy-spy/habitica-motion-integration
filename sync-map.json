@@ -399,7 +399,7 @@
     "motionId": "tk_6yfNMg1TEv1RX9sgv8k1pY",
     "name": "Box 1: Electronics Unit 14",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "791ED7F6-90AA-4AE1-8669-4E91B8AE8571": {
     "motionId": "tk_fTezWuX4Pfw1GnaacYuAzw",
@@ -410,6 +410,18 @@
   "5C12744F-ABD8-413E-9133-2F71705486D7": {
     "motionId": "tk_yhcVttunHjcYLrpne78vAJ",
     "name": "Box 1: Computing Chapter 10",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "04D210A9-9A3E-416D-AF10-5D3B74F67FF5": {
+    "motionId": "tk_wMcr7m9syMevN1uw5buyPb",
+    "name": "Box 1: Electronics Unit 7",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "3C5608E4-4038-44A4-BC53-EE4BCB63E7D0": {
+    "motionId": "tk_gCUwjCXFbzE4fh4CQcq8g7",
+    "name": "Box 2: Electronics Unit 14",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
