@@ -279,7 +279,7 @@
     "motionId": "tk_TaV1RQzVunqbEuzLmTa9VS",
     "name": "Do 2025 O Level Physics Paper 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "382C27E8-108A-47C1-B803-59A391CF460B": {
     "motionId": "tk_BGxdZBuBGFTTJnXCwaPcjZ",
@@ -291,49 +291,49 @@
     "motionId": "tk_qNQeC7T2kZ6pmG7N17LHAY",
     "name": "Review 2023 SST Prelim Math Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "684DDE93-CBAD-4F7E-87EE-5550561EBD34": {
     "motionId": "tk_DjrrJapodwn1MoJdKXzz53",
     "name": "Review 2025 SST Prelim A Math Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "8084EAC2-86EB-4130-A156-CE8E5540BAB4": {
     "motionId": "tk_mrb8o9MDTJeY2fWxksFeMH",
     "name": "Review 2025 SST Prelim English Paper 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "681CFD41-C87E-4B24-9536-175703A51AE3": {
     "motionId": "tk_R9NbWBuZCm5ze9rbiZRYKe",
     "name": "Review 2023 SST Prelim Math Paper 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "6DA00E5C-66D4-4706-B82E-FDC05AC18B9F": {
     "motionId": "tk_PFM3vXRuo59uJMJ4hwzE2R",
     "name": "Review 2025 SST Prelim A Math Paper 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "E89D3FF6-9FF4-4549-9309-8106E1181B04": {
     "motionId": "tk_YYkT1hm9yJc16hY1tbQKGo",
     "name": "Review Computing Revision Set 02",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "E38707E2-69BA-435B-8BE2-8FF19624ABDB": {
     "motionId": "tk_WxNEqg73CMXdRaGjAHm9zR",
     "name": "Review Computing Paper 2 Revision for the Week -- 23 July",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "AA0625FF-7492-4ED1-A0CF-6F22F2C0778A": {
     "motionId": "tk_qcCtjJtgvK66UEMr7EU44b",
     "name": "Review 2017 O Level Social Studies Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "850FBD9D-936D-4068-BE83-95ABB8626B28": {
     "motionId": "tk_ahRvyworWdd8giyuKWFZEC",
@@ -393,7 +393,7 @@
     "motionId": "tk_syuHjZwQvMpuuez2WkGDcP",
     "name": "Review 2025 O Level Physics Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "48456BC5-9755-4FFA-A25B-DD6ED7D1326F": {
     "motionId": "tk_6yfNMg1TEv1RX9sgv8k1pY",
@@ -566,6 +566,24 @@
   "9FA245B6-E51F-48EB-8D08-1DFEE3E50B5F": {
     "motionId": "tk_MfaoXaj615FJF4tU2gkGvX",
     "name": "Extra Pencil Case",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": true
+  },
+  "865A72F1-6686-4B38-81F2-1A9ACB77E309": {
+    "motionId": "tk_LGtQfr5pcRt7TXccVaxPeJ",
+    "name": "Graduation Tea Audition",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "28C48D64-0025-4A93-A373-057643573E70": {
+    "motionId": "tk_rgM7Db4ZUT2zkjy2bAqiQD",
+    "name": "HTX Questionaire",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "4D236A7A-7A25-4306-A1ED-99C11FC43940": {
+    "motionId": "tk_FfSaXppbHFT3fa2LvUpCMe",
+    "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
