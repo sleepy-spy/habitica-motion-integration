@@ -573,18 +573,18 @@
     "motionId": "tk_LGtQfr5pcRt7TXccVaxPeJ",
     "name": "Graduation Tea Audition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "28C48D64-0025-4A93-A373-057643573E70": {
     "motionId": "tk_rgM7Db4ZUT2zkjy2bAqiQD",
     "name": "HTX Questionaire",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "4D236A7A-7A25-4306-A1ED-99C11FC43940": {
     "motionId": "tk_FfSaXppbHFT3fa2LvUpCMe",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   }
 }
