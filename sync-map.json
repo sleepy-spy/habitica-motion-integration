@@ -586,5 +586,29 @@
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": true
+  },
+  "299EBF96-D593-4CAE-89DB-36D00C11DC9C": {
+    "motionId": "tk_UYQ4PFQAZCwFu2CqWqEivt",
+    "name": "2022 O Level English Paper 1 and 2",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "42E7B31F-582A-4610-B273-E24A22D11A40": {
+    "motionId": "tk_6yuPrybWMNrNzPbE6wSfWS",
+    "name": "2023 O Level Mathematics Paper 2",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "55404636-C082-4C74-A802-0C07BC61786B": {
+    "motionId": "tk_ketCnkwTUTzshPiQu7SbWk",
+    "name": "2026 SST Prelim Social Studies Paper Review",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "E47A247D-EF9F-4611-AFDE-976B1EF0E6B2": {
+    "motionId": "tk_Euk8echphbpVZj45e4d7Wr",
+    "name": "2026 SST Prelim History Paper Review",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
   }
 }
