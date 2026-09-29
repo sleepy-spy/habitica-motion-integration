@@ -591,7 +591,7 @@
     "motionId": "tk_UYQ4PFQAZCwFu2CqWqEivt",
     "name": "2025 O Level English Paper 1 and 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "42E7B31F-582A-4610-B273-E24A22D11A40": {
     "motionId": "tk_6yuPrybWMNrNzPbE6wSfWS",
@@ -615,17 +615,23 @@
     "motionId": "tk_vjktJ526rCa26tNwW2NXCH",
     "name": "Social Studies\tChapter 1",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "a249dbba-6a00-4e5e-b566-e84e9826e189": {
     "motionId": "tk_ppvPyS2sPdrBirLqpFWKgE",
     "name": "Social Studies\tChapter 7",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "6135dc09-6aca-498a-aed2-417b55f414a7": {
     "motionId": "tk_kjdA8p6MsjNicZ4ZcF2MRY",
     "name": "History\tChapter 6",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": true
+  },
+  "272035F8-2243-4D24-BD81-950FCEAAB521": {
+    "motionId": "tk_8tn6sZxtnsMQgvXAxVghKW",
+    "name": "2022 O Level Physics Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
