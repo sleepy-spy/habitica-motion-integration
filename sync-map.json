@@ -639,6 +639,12 @@
     "motionId": "tk_BhgjKLsSxAwhAeaEESkF3c",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": true
+  },
+  "CCD49C0C-1AEF-4C8B-AE5D-C1434E0612EC": {
+    "motionId": "tk_C5o3MQuKB5vtVQ2444DD5W",
+    "name": "Spaced Repetition",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
   }
 }
