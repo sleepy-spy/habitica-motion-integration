@@ -651,10 +651,22 @@
     "motionId": "tk_bR39VXapeCePnpD5xuevRF",
     "name": "Revise Physics Practical",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "1DEBB859-986B-43FB-852C-BDCAFE83DF43": {
     "motionId": "tk_u4dUd8JJFg3kkE6yQuitTX",
+    "name": "Spaced Repetition",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": true
+  },
+  "1086078F-BE3D-43CA-BCCA-F9572A93BC0E": {
+    "motionId": "tk_JhKm3ejVsSCjkaoNb1n4m6",
+    "name": "Revise Excel",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
+  },
+  "831C21C8-C775-47E2-A581-126011C89B78": {
+    "motionId": "tk_fuYhUGjCWhhYu2szAe7nUz",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": false
