@@ -663,12 +663,18 @@
     "motionId": "tk_JhKm3ejVsSCjkaoNb1n4m6",
     "name": "Revise Excel",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "831C21C8-C775-47E2-A581-126011C89B78": {
     "motionId": "tk_fuYhUGjCWhhYu2szAe7nUz",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
     "completed": true
+  },
+  "C3682E81-23AD-43E3-81F7-19D9FA6EE688": {
+    "motionId": "tk_QPiR9t2bGvP1Ae1gdaMzb7",
+    "name": "Spaced Repetition",
+    "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
+    "completed": false
   }
 }
