@@ -609,7 +609,7 @@
     "motionId": "tk_Euk8echphbpVZj45e4d7Wr",
     "name": "2026 SST Prelim History Paper Review",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "75ec3a97-6228-47c0-9bdd-2197f927e7e4": {
     "motionId": "tk_vjktJ526rCa26tNwW2NXCH",
@@ -699,12 +699,12 @@
     "motionId": "tk_fb5GRXjJVKkJuEym2dsnnq",
     "name": "English LC Practice",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "2398DA4F-2817-4332-9F29-EEADBF13CE33": {
     "motionId": "tk_XYA8k9rLwCGCzPCb2jN84v",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   }
 }
