@@ -603,7 +603,7 @@
     "motionId": "tk_ketCnkwTUTzshPiQu7SbWk",
     "name": "2026 SST Prelim Social Studies Paper Review",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "E47A247D-EF9F-4611-AFDE-976B1EF0E6B2": {
     "motionId": "tk_Euk8echphbpVZj45e4d7Wr",
@@ -681,7 +681,7 @@
     "motionId": "tk_QUrea3WAtgQ1FyQT53f3PQ",
     "name": "2022 O Level Social Studies Paper",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "FE1535A2-CE0F-4BF1-965B-77A7BBE8C546": {
     "motionId": "tk_5X5udpGikKNAjkBvWGq7ug",
@@ -693,7 +693,7 @@
     "motionId": "tk_v4XtHkrroh4XD8CG3UaVFN",
     "name": "2025 O Level Physics Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "B9F67DC6-908D-4970-9CDC-F1F52A0D102D": {
     "motionId": "tk_fb5GRXjJVKkJuEym2dsnnq",
@@ -711,7 +711,7 @@
     "motionId": "tk_MBAZmvXNQygcLVdoAnsL7F",
     "name": "2026 MGS Prelim Mathematics Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "D2E4D543-C32F-48D2-A45F-A6301B6E85E5": {
     "motionId": "tk_2J4mUxkiJPwzcH4f3URFxM",
@@ -735,19 +735,19 @@
     "motionId": "tk_JxXDgaieLmrmsQhpRCfpFR",
     "name": "Spaced Repetition",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "44DD9407-7722-4C51-94DE-0FDB20FCA53E": {
     "motionId": "tk_bz44QqZvoDq4LEyQSUEo7V",
     "name": "3 History Essays",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "4106E550-2C8C-4D66-A4ED-B6B38D83267E": {
     "motionId": "tk_UjHiYLBYWJkKxc9heJwWvo",
     "name": "Review 2022 O Level Physics Paper 2",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   },
   "AA2DE836-5A3E-4654-BAF9-75E99BA3C650": {
     "motionId": "tk_5SqwK6h9xD2VcAmERhm9AK",
@@ -759,6 +759,6 @@
     "motionId": "tk_VbzFwGY4dR1uqdAeRaPJdE",
     "name": "English Paper Review",
     "workspaceId": "ws_AWzRmWNE3RT3bwV4YhMZC9",
-    "completed": false
+    "completed": true
   }
 }
